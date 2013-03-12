@@ -15,8 +15,8 @@ then it kills the screen saver if any.
 
 The problem
 ===========
-In my work at CERN have set on my linux desktop to start the screen saver
-locked with password after 1min of inactivity. Many times per day I have to
+In my work I have set my linux desktop to start the screen saver
+locked with password after 1 min of inactivity. Many times per day I have to
 leave my office, which immediately locks the computer. When I return I have to
 type in my password... which becomes somehow annoying :)
 
