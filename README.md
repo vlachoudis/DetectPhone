@@ -3,7 +3,7 @@ DetectPhone
                                                                         o o
                                                                       ____oo_
                                 detect_phone                         /||    |\
-                          Vasilis.Vlachoudis@cern.ch                  ||    |
+                             vvlachoudis@gmail.ch                     ||    |
                                     2012                              `.___.'
 
 About
