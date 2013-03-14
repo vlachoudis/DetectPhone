@@ -58,17 +58,23 @@ script file. You have to modify the 3 lines
    system settings, or by making it visible and scan it with the command
    $ hciconfig scan
 
-2. LOCKPRG="kscreenlocker"
-   Replace the screen locking program with appropriate one for your desktop
-   environment
-   - KDE:   kscreenlocker
-   - GNOME: gnome-screensaver? (Could someone verify if this is the correct one)
-   - XFCE:  xscreensaver?                          -//-
-   - LXDE:  xscreemsaver?                          -//-
+2. LOCKPRG="xscreensaver"
+    This script is limited to xscreensaver (it use some xscreensaver magic)
+    You can check out original source: https://github.com/vlachoudis/DetectPhone
+    But original source wont correctly work with xscreensaver
 
-3. SLEEP=5
+3. MIN_SIGNAL_STRENGTH=-11
+   Replace with bluetooth strength level (less is worse) on which we try to do "autounlocking"
+   To check those levels set DEBUG=true & run script & watch for level index
+
+4. SLEEP=5
    Set the sleep time (seconds) for checking.
 
+5. TIMEOUT_AFTER_LOCK=30
+   Delay in seconds after lock event
+
+6. DEBUG=false
+   Set true to get some additional info for adjusting setting to your case 
 
 Install
 =======
@@ -77,3 +83,6 @@ Autostart the program when login in the desktop enviornment
 - GNOME:
 - XFCE:
 - LXDE:
+
+Just start this script in background (setsid ./detect_phone.sh)
+
