@@ -36,7 +36,7 @@ kscreenlocker_state() {
 
 # kill kscreenlocker
 kscreenlocker_kill() {
-	pkill -u $ME kscreenlocker
+	qdbus  | grep kscreenlocker_greet | xargs -I {} qdbus {} /MainApplication quit
 }
 
 # return gnome_screensaver state
