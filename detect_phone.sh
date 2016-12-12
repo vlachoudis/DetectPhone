@@ -43,7 +43,6 @@ kscreenlocker4_kill() {
 # return kscreenlocker state
 kscreenlocker5_state() {
 	local active=$(qdbus org.freedesktop.ScreenSaver /ScreenSaver GetActive)
-	echo "Active= $active"
 	if [ $active = true ]; then
 		LOCKED=1
 	else
